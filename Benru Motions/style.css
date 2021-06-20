@@ -1,0 +1,50 @@
+*{
+ transition: all 1s;
+}
+body{
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: rgb(46, 46, 46);
+}
+#heroSection{
+ font-family: 'Roboto', sans-serif; 
+}
+.searchBox{
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+}
+.searchBox::placeholder {
+    color: white;
+    font-style: italic;
+    opacity: 0.4;
+}
+.searchBtn{
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, 0.63);
+    color: white;
+    font-size: 2rem;
+}
+ 
+main{
+    /* border: 1px solid red; */
+    padding: 2rem 2rem 2rem 1rem;
+    margin-right: .5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* white-space: nowrap; */
+}
+
+.fontRoboto{
+  font-family: 'Roboto', sans-serif; 
+}
+
+.textHeading{
+    color: rgb(251, 107, 107);
+    font-weight: bold;
+}
+.loader{
+    height: 100px;
+    width: 100px;
+}
+

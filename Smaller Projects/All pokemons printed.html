@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        text-align: center;
+    }
+    div{
+        padding: .2rem;
+        margin: .2rem;
+        border: 1px solid rgb(173, 173, 173);
+        border-radius: 1rem;
+        height: auto;
+        width: 10rem;
+        height: 10rem;
+        display: inline-block;
+
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+</style>
+</head>
+<body style="display: block;">
+    <section id="container"></section>
+    <script>
+        for(let i=1; i<=151; i++){
+
+            const container = document.querySelector('#container');
+            const myDiv = document.createElement('DIV');
+            const myImg = document.createElement('IMG');
+            myImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`;
+            myDiv.appendChild(myImg);
+            container.appendChild(myDiv);
+        }
+    </script>
+</body>
+</html>

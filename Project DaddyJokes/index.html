@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bulma.min.css">
+  <script src="axios.js"></script>
+  <title>Document</title>
+</head>
+
+<body>  
+
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="">
+          <span class="Logo">DaddyJoke</span>
+        </a>
+    
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+    
+          <a class="navbar-item">
+            Documentation
+          </a>
+    
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+    
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+   <main style="min-height: 85vh;">
+
+        <div class="container">
+          <div class="columns p-4">
+            <div class="column is-2 has-text-centered">
+              <div class="box">
+                <span class="subtitle">Advertisement</span>
+                <figure class="image"></figure>
+                  <img class="mt-4" src="adBanner1.png" alt="advertise1">
+                </figure>
+                </div>
+            </div>
+            <div class="column is-8 has-text-centered">
+              <div class="box">
+                <span class="is-size-4 has-text-link is-uppercase">Joke Generator</span>
+                <hr>
+                <span class="has-text-grey">Every time you click on the 'New Joke' button, the new joke will be arrived from server...</span>
+                <div id="jokesContainer" class="pt-5 has-text-primary-dark has-text-weight-semibold">
+                  <!-- Joke will be fetched in this container using asynchronous javascript and JSON (AJAJ)-->
+                </div>
+                <button id="btn_newJoke" class="button is-danger mt-5">New Joke</button>
+              </div>
+            </div>
+            <div class="column is-2 t has-text-centered">
+              <div class="box">
+                <span class="subtitle">Advertisement</span>
+                <figure class="image"></figure>
+                  <img class="mt-4" src="adBanner2.png" alt="advertise2">
+                </figure>
+                </div>
+            </div>
+          </div>
+        </div>
+
+   </main>
+
+    <footer class="foot">
+      <div class="content has-text-centered">
+        <p>
+          <strong class="logoColor">DaddyJoke </strong> &nbsp;by Shivam S Bharati. The source code is licensed to
+          <a href="http://bharaticomputer.com/" target="_blank" class="has-text-info">Bharati Computer World (BCW)</a> Since 1997 | All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+
+
+  <script src="main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+// Get all "navbar-burger" elements
+const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+// Check if there are any navbar burgers
+if ($navbarBurgers.length > 0) {
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach( el => {
+    el.addEventListener('click', () => {
+
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle('is-active');
+      $target.classList.toggle('is-active');
+
+    });
+  });
+}
+
+});
+  </script>
+</body>
+
+</html>
